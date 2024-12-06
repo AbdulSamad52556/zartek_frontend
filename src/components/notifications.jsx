@@ -48,6 +48,7 @@ const Notifications = ({notifications}) => {
         try {
             const response = await api.post('/api/accept-ride/', { ride_id: rideId });
             localStorage.setItem('rideId',rideId)
+            window.location.reload()
         } catch (error) {
             setError(error.response?.data?.error || 'Something went wrong');
         }
@@ -76,7 +77,7 @@ const Notifications = ({notifications}) => {
     
 useEffect(() => {
     if (rideId != 0 ){
-        const socket = new WebSocket(`ws://zartek.audsculpt.shop/ws/ride-tracking/${rideId}/`);
+        const socket = new WebSocket(`wss://zartek.audsculpt.shop/ws/ride-tracking/${rideId}/`);
     
         socket.onopen = () => {
             console.log('WebSocket connected');

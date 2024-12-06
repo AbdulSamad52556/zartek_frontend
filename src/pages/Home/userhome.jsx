@@ -152,7 +152,7 @@ const Userhome = () => {
       </div>
       {showRideList ?
       <Userridelist notifications={rides}/>:
-      <form onSubmit={handleSubmitLocation} className="flex flex-col md:flex-row justify-center gap-10 p-10">
+      <form onSubmit={handleSubmitLocation} className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 p-10">
       <div>
         <label htmlFor="location">Enter your Location</label>
         <Autocomplete onLoad={(autocomplete) => onLoad(autocomplete, setLocation)} onPlaceChanged={onPlaceChanged}>

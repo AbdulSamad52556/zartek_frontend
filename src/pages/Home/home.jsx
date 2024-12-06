@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
         <Header/>
-    <div className='flex w-full h-[90vh]'>
+    <div className='flex flex-col md:flex-row justify-center items-center w-full h-[90vh]'>
         <div className='w-1/2 flex justify-center items-center'>
             <h1 className='text-5xl font-mono font-bold relative p-8'>
                 Ready <br /> For <br /> Take Off

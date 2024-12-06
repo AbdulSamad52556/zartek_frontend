@@ -40,7 +40,7 @@ const Login = () => {
         navigate(redirectPath)
         
     } catch (error) {
-        alert(error)
+        alert('User Not Found')
     } 
 
     setError('');

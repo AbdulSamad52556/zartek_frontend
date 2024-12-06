@@ -16,17 +16,15 @@ const Header = () => {
 
   return (
     <div className='w-100 h-20 flex items-center bg-[#2a9d90be]'>
-    <div className='w-4/5 gap-20 text-black font-bold flex justify-end items-center font-mono'>
-      <div className='cursor-pointer hover:text-[#10443ef8]'>Home</div>
+    <div className='w-4/5 gap-8 md:gap-20 text-black font-bold flex justify-end items-center font-mono'>
+      <div className='cursor-pointer hover:text-[#10443ef8]' onClick={()=>navigate('/')}>Home</div>
       <div className='cursor-pointer hover:text-[#10443ef8]'>About</div>
       <div className='cursor-pointer hover:text-[#10443ef8]'>Contact</div>
       <div className='cursor-pointer hover:text-[#10443ef8]' onClick={()=>setShow(!show)}>Start</div>
     </div>
     {show && !user.access ? (
-  <div>
-    <br />
-    <br />
-    <br />
+  <div className='fixed top-20 right-4 md:right-6 lg:right-32'>
+    
     <div className='bg-[#20776d] p-1 rounded flex gap-1 font-bold font-mono'>
       <div className='bg-white cursor-pointer py-2 px-6 rounded' onClick={() => { navigate('/login') }}>
         <h1>Login</h1>
@@ -37,10 +35,8 @@ const Header = () => {
     </div>
   </div>
 ) : ( show &&
-  <div>
-    <br />
-    <br />
-    <br />
+  <div className='fixed top-20 right-4 md:right-6 lg:right-20'>
+     
     <div className='bg-[#20776d] p-1 rounded flex gap-1 font-bold font-mono'>
       <div className='bg-white cursor-pointer py-2 px-6 rounded' onClick={() => { navigate(`/${user.role}`) }}>
         <h1>Start Journey</h1>
