@@ -76,7 +76,7 @@ const Notifications = ({notifications}) => {
     
 useEffect(() => {
     if (rideId != 0 ){
-        const socket = new WebSocket(`ws://localhost:8000/ws/ride-tracking/${rideId}/`);
+        const socket = new WebSocket(`ws://zartek.audsculpt.shop/ws/ride-tracking/${rideId}/`);
     
         socket.onopen = () => {
             console.log('WebSocket connected');

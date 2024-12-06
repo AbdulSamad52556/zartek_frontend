@@ -57,7 +57,7 @@ const Driverhome = () => {
   },[updatework])
 
   useEffect(() => {
-    const socket = new WebSocket(`ws://localhost:8000/ws/ride_notifications/${user.id}/`);
+    const socket = new WebSocket(`ws://zartek.audsculpt.shop/ws/ride_notifications/${user.id}/`);
 
     socket.onopen = () => {
       console.log('WebSocket connected!');
