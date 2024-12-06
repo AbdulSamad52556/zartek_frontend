@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes borderAnimation {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #2a9d8f;
+    }
+    100% {
+      border-color: transparent;
+    }
+  }
+  
+  .animate-border {
+    animation: borderAnimation 2s ease-in-out infinite;
+  }
+  
